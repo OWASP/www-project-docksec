@@ -1,0 +1,19 @@
+audience:
+  - breaker
+  - builder
+leaders:
+  - name: Advait Patel
+    email: advait.patel@owasp.org
+level: 2
+name: OWASP DockSec
+pitch: A very brief, one-line description of your project
+repositories:
+  - name: www-project-docksec
+    url: https://github.com/OWASP/www-project-docksec
+    description: OWASP Foundation web repository
+tags:
+  - example-tag
+  - custom-tag-1
+  - custom-tag-2
+type: code
+website: https://owasp.org/www-project-docksec
