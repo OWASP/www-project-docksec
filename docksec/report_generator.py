@@ -21,8 +21,8 @@ from datetime import datetime
 from fpdf import FPDF
 from pathlib import Path
 
-from config import RESULTS_DIR, html_template
-from utils import get_custom_logger
+from docksec.config import RESULTS_DIR, html_template
+from docksec.utils import get_custom_logger
 
 # Initialize logger
 logger = get_custom_logger(__name__)
