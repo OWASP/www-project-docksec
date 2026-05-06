@@ -11,9 +11,9 @@ import sys
 import re
 import shlex
 from pathlib import Path
-from config import RESULTS_DIR
-from config import docker_score_prompt
-from utils import ScoreResponse, get_llm, print_section, get_custom_logger
+from docksec.config import RESULTS_DIR
+from docksec.config import docker_score_prompt
+from docksec.utils import ScoreResponse, get_llm, print_section, get_custom_logger
 
 # Initialize logger
 logger = get_custom_logger(__name__)
@@ -997,7 +997,7 @@ class DockerSecurityScanner:
             vuln_score = max(0.0, 100.0 - deduction)
 
         # Configuration score — static Dockerfile checks
-        from score_calculator import SecurityScoreCalculator
+        from docksec.score_calculator import SecurityScoreCalculator
         config_score = SecurityScoreCalculator._calculate_config_score(self, results)
 
         overall = (dockerfile_score * 0.3) + (vuln_score * 0.5) + (config_score * 0.2)
@@ -1063,7 +1063,7 @@ class DockerSecurityScanner:
             #
             # with open(template_path, 'r', encoding='utf-8') as f:
             #     html_template = f.read()
-            from config import html_template
+            from docksec.config import html_template
             
             # Prepare template variables
             template_vars = self._prepare_html_template_vars(results)
